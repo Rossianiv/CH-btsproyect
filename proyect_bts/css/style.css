@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Dosis:wght@500&family=Noto+Serif+KR:wght@500&family=Sacramento&display=swap');
+
+/*RESET*/
+
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0;
+   
+}
+
+:root {
+    --color-primario : #5C2880;
+    --color-secundario: #c9a4e2;
+}
+
+img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+/*END RESET*/
+
+li, a, button {
+    font-family: "Dosis";
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header {
+    background-color:#1f2232; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 5px 10%;    
+}
+
+.logo a img {    
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+
+}
+
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition:  all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #C496FB;
+} 
+
+.about {
+    padding: 9px 25px;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:  all 0.3s ease 0s;
+    
+}
+
+.about:hover {
+    background-color: #5e8271;
+}
+main {
+    background-image: url("../images/BG4.jpg")
+}
+
+.img-welcome {
+    width: 100%;   
+    padding: 100px 100px 200px 100px;
+
+}
+
+.subt {
+    font-family: "Sacramento";
+    font-size: 100px;
+    text-align: center;
+    padding: 100px 0px 100px 0px;
+    
+}
+
+.p-right div {
+    font-family: 'Dosis';
+    text-align: right;
+    padding-bottom: 200px;
+}
+
+main div form {
+    font-family: "Dosiss";
+    color: #ffffff;
+}
+#discografia {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto; 
+    color: #5C2880;      
+}
+
+#discografia div li  { 
+    color: black;      
+}
+
+footer {
+    background-color:#1f2232; 
+    font-style: oblique;
+    text-align: center;
+}
+
+footer li a {
+    color: #e3bac6;
+}
+
+footer li {
+    color: #e3bac6;
+}

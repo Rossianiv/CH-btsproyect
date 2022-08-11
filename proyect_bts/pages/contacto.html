@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=KS_C_5601">
+    <meta HTTP-EQUIV="Content-language" CONTENT="ko">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/logo.svg" type="image/x-icon">
+    <title>CONTACTO</title>
+</head>
+<body>
+
+    <header class="header" id="contacto-arriba">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo">                
+            </a>
+       </div>
+        <nav> 
+            <ul class="nav-links">
+                <li>
+                    <a href="./historia.html"><em><bold>Historia</bold></em></a>
+                </li>
+                <li>
+                    <a href="./discografia.html"><em><bold>Discografia</bold></em></a>
+                </li>
+                <li>
+                    <a href="./miembros.html"><em><bold>Miembros</bold></em></a>
+                </li>
+            </ul>   
+        </nav>
+
+        <a class="about" href="./contacto.html"><button>Contacto</button> </a> 
+    </header>
+
+    <main>
+        <div></div>
+        <div></div>
+        <div>
+            <form id="form-coment" action="" method="post" > <!--metodos son formas en que se envia la informacion. Hay POST (invisible) o GET-->
+                
+                <fieldset>
+                    <legend> <h2>Dejanos un comentario!</h2> </legend>
+                        
+                        <div>
+                            <label for="nombre">Ingrese su completo</label>        
+                            <input type="text" id="nombre" placeholder="Ingrese Nombre y Apellido...">
+                        </div>  
+                        <div>
+                            <label for="correo">Ingrese su email</label>
+                            <input id="mail" name="mail" type="email" placeholder="ejemplo@mail.com" required>
+                        </div>    
+                        <div> 
+                            <label for="nombre">Ingrese su fecha de Nacimiento</label>    
+                            <input type="date" id="date">
+                        </div>       
+                        <div>
+                            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Ingrese un Comentario :D"></textarea>
+                        </div>
+                        <div>
+                            <input type="button" value="Enviar">
+                            <input id="reset" type="reset" value="Limpiar">
+                        </div> 
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <ul id="pie_pag">
+                <li>enlaces de contacto</li>
+                <li><a href="#contacto-arriba" >Contacto</a></li>
+                <li><a href="https://www.coderhouse.com/">Mas sobre CoderHouse</a></li>
+                <li>fecha de creacion de la pagina</li>
+            </ul>
+            
+        </section>
+    </footer>    
+</body>
+</html>

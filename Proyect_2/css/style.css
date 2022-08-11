@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.border-container {
+    border: 1px solid red;
+}
+
+.bg-container {
+    background-color: black;
+    color: white;
+}
+
+#novedades {
+    background-color: blueviolet;
+}
+
+div p{
+    color: red;
+}
