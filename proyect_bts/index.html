@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=KS_C_5601">
-    <meta HTTP-EQUIV="Content-language" CONTENT="ko">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>PAGINA_PRINCIPAL</title>
@@ -12,34 +10,32 @@
 
 </head>
 
-<body>
+<body class="grid-body">
 
     <header>
-        <div class="logo">
+        <div>
             <a href="./index.html">
-                <img src="./images/logo.svg" alt="logo">                
+                <img class="logo" src="./images/logo.svg" alt="logo">
             </a>
-       </div>
+        </div>
         <nav> 
             <ul class="nav-links">
                 <li>
-                    <a href="./pages/historia.html"><em><bold>Historia</bold></em></a>
+                    <a href="./pages/historia.html">Historia</a>
                 </li>
                 <li>
-                    <a href="./pages/discografia.html"><em><bold>Discografia</bold></em></a>
+                    <a href="./pages/discografia.html">Discografia</a>
                 </li>
                 <li>
-                    <a href="./pages/miembros.html"><em><bold>Miembros</bold></em></a>
+                    <a href="./pages/miembros.html">Miembros</a>
                 </li>
             </ul>   
         </nav>
-
-        <a class="about" href="./pages/contacto.html"><button>Contacto</button> </a> 
-
+        <a class="about" href="./pages/contacto.html">Contacto </a> 
     </header>
 
     <main>        
-        <!--Serie de imagenes, transitables-->
+        <!--Bienvenida-->
         <div class="img-welcome">
             <img src="./images/welcome2.png" alt="bienvenida">
         </div>
@@ -55,7 +51,7 @@
         <div>
             <h2 class="subt">Miembros</h2> <br>
             <a href="./pages/miembros.html" >
-                <img src="/proyect_bts/images/miembros.jpg" alt="miembros de bts">
+                <img src="./images/miembros.jpg" alt="miembros de bts">
             </a>
         </div>
 
@@ -63,22 +59,23 @@
         <div>
             <h2 class="subt">Discografia</h2> 
             <a href="./pages/discografia.html">
-                <img src="/proyect_bts/images/discografia.png" alt="discografia de bts">
+                <img src="./images/discografia.png" alt="discografia de bts">
             </a>
         </div>
     </main>
 
     <footer>
-        <!--Pie de pagina, contactos basicos-->
-        <section>
-            <ul id="pie_pag">
-                <li>enlaces de contacto</li>
+        <!--Pie de pagina-->
+        <div>
+            <img src="./images/pie-de-pagina.jfif" alt="bts">
+        </div>
+        <div>
+            <ul class="nav-links">
                 <li><a href="./pages/contacto.html" >Contacto</a></li>
                 <li><a href="https://www.coderhouse.com/">Mas sobre CoderHouse</a></li>
-                <li>fecha de creacion de la pagina</li>
-            </ul>
-            
-        </section>
+                <li>2022</li>
+            </ul>    
+        </div>
     </footer>    
 </body>
 </html>

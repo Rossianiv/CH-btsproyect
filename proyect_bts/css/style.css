@@ -20,6 +20,7 @@ img, picture, video, iframe, figure {
     display: block;
     object-fit: cover;
     object-position: center;
+    padding: 0px 50px 25px 50px
 }
 
 a {
@@ -44,8 +45,9 @@ html {
 }
 /*END RESET*/
 
+/*header*/
 li, a, button {
-    font-family: "Dosis";
+    font-family: "Dosis", 'Times New Roman';
     font-size: 20px;
     font-weight: 500;
     color: #ffffff;
@@ -53,25 +55,23 @@ li, a, button {
 }
 
 header {
-    background-color:#1f2232; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    padding: 5px 10%;    
+    padding: 30px 8%;
+    background-color:#1f2232; 
+    height: 20vh;
 }
 
-.logo a img {    
-    height: 70px;
-    width: auto;
+.logo {    
+    height: 80px;
     cursor: pointer;
-
+    padding: 0px;
 }
-
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 15px;
 }
 
 .nav-links li a {
@@ -89,40 +89,68 @@ header {
     border-radius: 50px;
     cursor: pointer;
     transition:  all 0.3s ease 0s;
-    
+    color: white;
 }
 
 .about:hover {
-    background-color: #5e8271;
+    background-color: #c9a4e2;
 }
+
+/*fin header*/
+
 main {
-    background-image: url("../images/BG4.jpg")
+    background: linear-gradient(55deg, rgba(252,207,186,1) 0%, rgba(211,179,216,1) 50%, rgba(159,201,239,1) 100%);
+    grid-area: main;
 }
 
 .img-welcome {
     width: 100%;   
-    padding: 100px 100px 200px 100px;
+    padding: 100px 100px 100px 100px;
 
 }
 
+/*Subtitulos*/
 .subt {
     font-family: "Sacramento";
     font-size: 100px;
     text-align: center;
-    padding: 100px 0px 100px 0px;
+    padding: 80px 0px 80px 0px;
     
 }
 
 .p-right div {
     font-family: 'Dosis';
     text-align: right;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 main div form {
     font-family: "Dosiss";
     color: #ffffff;
 }
+ 
+/*footer*/ 
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color:#1f2232; 
+    align-items: center;
+    height: 13vh;
+    font-style: oblique;
+    text-align: right;
+    color: #e3bac6;
+}
+
+footer div img {
+    padding: 10px 0px 0px 10px;
+    height: 70px;
+    width: auto;
+}
+
+/*end footer*/
+
+/*estilos discografia*/ 
 #discografia {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -134,16 +162,148 @@ main div form {
     color: black;      
 }
 
-footer {
-    background-color:#1f2232; 
-    font-style: oblique;
-    text-align: center;
+
+
+.style-cover a img {
+    height: 250px;
+    width: auto;
+    padding: 0px 30px 25px 30px
 }
 
-footer li a {
-    color: #e3bac6;
+.grid-body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 1fr 70px;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    
+}    
+
+
+#footer {
+    grid-area: footer;
 }
 
-footer li {
-    color: #e3bac6;
+#header {
+    grid-area: header;
 }
+
+
+#grid-main-discografia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: repeat(7, 1fr) ;
+    grid-template-areas:"cv1 cv2 cv3"
+                        "cv4 cv5 cv6"
+                        "cv7 cv8 cv9"
+                        "cv10 cv11 cv12"
+                        "cv13 cv14 cv15"
+                        "cv16 cv17 cv18"
+                        "cv19 . ." ;
+                        align-items: center;
+                        justify-items: center;
+                        align-content: center;
+                        justify-content: center;                    
+    grid-gap: 50px;
+    padding: 50px;
+}
+
+#cv1 {
+    grid-area: cv1;
+}
+#cv2 {
+    grid-area: cv2;
+}
+#cv3 {
+    grid-area: cv3;
+}#cv4 {
+    grid-area: cv4;
+}#cv5 {
+    grid-area: cv5;
+}#cv6 {
+    grid-area: cv6;
+}#cv7 {
+    grid-area: cv7;
+}#cv8 {
+    grid-area: cv8;
+}#cv9 {
+    grid-area: cv9;
+}#cv10 {
+    grid-area: cv10;
+}
+#cv11 {
+    grid-area: cv11;
+}#cv12 {
+    grid-area: cv12;
+}#cv13 {
+    grid-area: cv13;
+}#cv14 {
+    grid-area: cv14;
+}#cv15 {
+    grid-area: cv15;
+}#cv16 {
+    grid-area: cv16;
+}#cv17 {
+    grid-area: cv17;
+}#cv18 {
+    grid-area: cv18;
+}#cv19 {
+    grid-area: cv19;
+}
+
+@media only screen and (max-width: 1024px) {
+    #grid-main-discografia {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, 1fr) ;
+        grid-template-areas:"cv1 cv2"
+                            "cv3 cv4"
+                            "cv5 cv6"
+                            "cv7 cv8"
+                            "cv9 cv10"
+                            "cv11 cv12"
+                            "cv13 cv14"
+                            "cv15 cv16"
+                            "cv17 cv18"
+                            "cv19 ." ;
+    }
+
+    .style-cover a img {
+        height: 300px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #grid-main-discografia {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(19, 1fr) ;
+        grid-template-areas:"cv1"
+                            "cv2"
+                            "cv3" 
+                            "cv4"
+                            "cv5" 
+                            "cv6"
+                            "cv7" 
+                            "cv8"
+                            "cv9" 
+                            "cv10"
+                            "cv11" 
+                            "cv12"
+                            "cv13" 
+                            "cv14"
+                            "cv15" 
+                            "cv16"
+                            "cv17" 
+                            "cv18"
+                            "cv19" ;
+    }
+
+    .style-cover a img {
+        height: 350px;
+        width: auto;
+    }
+}
+
+/*fin estilos discografia*/
