@@ -99,14 +99,15 @@ header {
 /*fin header*/
 
 main {
+    height: auto;
     background: linear-gradient(55deg, rgba(252,207,186,1) 0%, rgba(211,179,216,1) 50%, rgba(159,201,239,1) 100%);
     grid-area: main;
 }
 
 .img-welcome {
     width: 100%;   
-    padding: 100px 100px 100px 100px;
-
+    padding: 50px 100px 50px 100px;
+    
 }
 
 /*Subtitulos*/
@@ -114,11 +115,11 @@ main {
     font-family: "Sacramento";
     font-size: 100px;
     text-align: center;
-    padding: 80px 0px 80px 0px;
+    padding: 80px 0px 60px 0px;
     
 }
 
-.p-right div {
+.p-right {
     font-family: 'Dosis';
     text-align: right;
     padding-bottom: 100px;
@@ -165,9 +166,11 @@ footer div img {
 
 
 .style-cover a img {
-    height: 250px;
-    width: auto;
-    padding: 0px 30px 25px 30px
+    height: auto ;
+    width: 300px;
+    padding: 0px 30px 25px 30px;
+    max-width: 100%;
+   
 }
 
 .grid-body {
@@ -267,12 +270,11 @@ footer div img {
                             "cv15 cv16"
                             "cv17 cv18"
                             "cv19 ." ;
+        grid-gap: 15px;
+        padding: 50px 15px;
     }
 
-    .style-cover a img {
-        height: 300px;
-        width: auto;
-    }
+    
 }
 
 @media only screen and (max-width: 500px) {
@@ -301,9 +303,31 @@ footer div img {
     }
 
     .style-cover a img {
-        height: 350px;
-        width: auto;
+        width: 450px;
     }
 }
 
 /*fin estilos discografia*/
+
+/*transformaciones-animaciones*/
+
+div.transf-1 {
+    display: flexbox;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+}  
+
+div.transf-1 img {
+    height: auto;
+    width: auto;
+}
+
+div.transf-1:hover {
+    transform: perspective(3000px) rotateY(5deg);
+}
