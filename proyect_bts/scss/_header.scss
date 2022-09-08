@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Dosis:wght@500&family=Noto+Serif+KR:wght@500&family=Sacramento&display=swap');
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    background-color:#805fb6; 
+    min-height: 18vh;
+
+    div {
+        display: flex;
+        align-items: center;
+        a {
+            img.logo {
+                width: auto;
+                height: 15vh;
+                cursor: pointer;
+                padding: 0px;  
+                margin-right: 20px; 
+            }
+        }
+        h1 {
+            a {
+                font-family: 'Dancing Script';
+                font-size: 3rem;
+                text-decoration: none;
+                color: black;
+            }
+            
+        }
+    }
+    nav {
+        ul {
+            
+            li { 
+                
+                list-style-type: none;
+                display: inline-block;
+                padding: 0px 15px;
+                font-family: "Dosis";
+                font-size: 2rem;
+                font-weight: 500;
+                color: #5C2880;
+               
+                a {
+                    text-decoration: none;
+                    list-style-type: none;
+                    display: inline-block;
+                    padding: 0px 15px;
+                    font-family: "Dosis";
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #431d5e;
+                    transition:  all 0.3s ease 0s;
+                    &:hover {
+                        color: #ffffff;
+                    }
+
+                }
+            }
+        }
+    }
+ }
+
+ .about {
+    padding: 9px 25px;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:  all 0.3s ease 0s;
+    color: white;
+}
+
+.about:hover {
+    background-color: #CFB4D6;
+    color: #5C2880;
+} 
+
+ @media only screen and (max-width: 1200px) {
+    header {
+       flex-direction: column;
+       div {
+            a {
+                img.logo {
+                    width: auto;
+                    height: 10vh;
+                }
+            }
+            h1 {
+                font-size: 3rem;   
+            }
+       }
+       nav {
+            ul{
+                li {
+                    font-size: 5px;
+                    padding-top: 10px;
+                }
+            }
+       }
+    }
+
+    
+}
