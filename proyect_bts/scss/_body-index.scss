@@ -13,11 +13,10 @@ main.main-index {
     justify-content: center;
     align-items: center;
     grid-gap: 5em;
-    padding-top: 3em;
-    padding-bottom: 2em;
+    padding: 5em;
 
     //pagina de bienvenida
-        div {
+        div.img-welcome {
             grid-area: img-w;
             img {
                 width: 100%;   
@@ -26,14 +25,10 @@ main.main-index {
         }
 
     //Acerca de la pagina
-    div {
+    div.animated-sub {
         grid-area: subt;
         h2 {
-           position: relative; 
-           place-content: center;
-           text-align: center;
-           width: max-content;
-           margin-left: 1em;
+           
         }        
     }
 
@@ -51,7 +46,7 @@ main.main-index {
     
 
     //seccion "miembros"
-    div {
+    div#memb {
         grid-area: memb;
         display: grid;
         grid-template-columns:1fr;
@@ -69,14 +64,15 @@ main.main-index {
         div {
             grid-area: members;
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             div {
+                // grid-area: jm;
                 a {
                     img {
                         width: auto;
-                        height: 55vh;
+                        height: 47vh;
 
                     }
                 }
@@ -86,29 +82,43 @@ main.main-index {
     }
 
     //seccion "discografia"
-    div {
-        grid-area: disco;
-        display: flex;
-        justify-content: center;
-        align-items: center;            
-        }
-        h2 {
-            // text-align: center;
-        a {
-            img {
-                width: auto;
-                height: 25vh;
-                
+    div#disco {
+        div#disco {
+            grid-area: disco;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+            }
+            h2 {
+                // text-align: center;
+            a {
+                img {
+                    width: auto;
+                    height: 25vh;
+                    
+                }
             }
         }
-    }
+
+}
+}
+
+//clases y id's
 
 .subt {
     font-family: 'Dancing Script';
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 4rem;
+    padding: 0;
+}
+
+.animated-sub {
+    position: relative; 
+           place-content: center;
+           text-align: center;
+           width: max-content;
+           margin-left: 1em;
 }
 
 h2.animated-sub::before, h2.animated-sub::after  {
