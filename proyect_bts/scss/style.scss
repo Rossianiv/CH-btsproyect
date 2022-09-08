@@ -2,8 +2,12 @@
   
 //header 
 @import 'header';
+//footer
+@import 'footer';
 //body-index
 @import 'body-index';
+
+
 
 //Reset
 *{
@@ -49,11 +53,7 @@
   }
   /*END RESET*/
 
-  //grid general
-
-
 main {
     height: auto;
     background: linear-gradient(55deg, rgba(252,207,186,1) 0%, rgba(211,179,216,1) 50%, rgba(159,201,239,1) 100%);
-    grid-area: main;
 }  
