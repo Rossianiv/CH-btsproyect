@@ -3,8 +3,6 @@ $font-2: 'Dosis' ;
 $bg-2: #1f2232;
 $f-color-2 : #bfbbe1;
 
-@import 'body-index';
-//body-discografia
 
 
 
@@ -200,12 +198,59 @@ $f-color-2 : #bfbbe1;
   }
 
 
-@media screen and (max-width: 768px){
-	.contenedor {
-		grid-template-areas: "header header header"
-						 "contenido contenido contenido"
-						 "sidebar sidebar sidebar"
-						 "widget-1 widget-1 widget-2"
-						 "footer footer footer";
+@media screen and (max-width: 1024px){
+	.contenido-dico {
+    grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "cov song-l"
+						 "videos about" 
+                         " galery galery";
+    row-gap: 2em;
+
+        div.widget-2 {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: "tt-g tt-g"
+                                "nj sj"
+                                "yg hs"
+                                "jm th"
+                                "jk .";
+             
+        }
+
 	}
+}
+
+@media screen and (max-width: 500px){
+	.contenido-dico {
+    grid-template-columns: 1fr;
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "cov"
+                         "song-l"
+                         "about"   
+						 "videos" 
+                         "galery";
+    row-gap: 2em;
+        div, aside {
+            height: auto ;
+            width: 400px;
+            padding: 0;
+            margin: 0;
+            max-width: 100%;    
+        }
+
+        div.widget-2 {
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5 repeat(7, 1fr);
+            grid-template-areas: "tt-g"
+                                 "nj" 
+                                 "sj"
+                                 "yg"
+                                 "hs"
+                                 "jm"
+                                 "th"
+                                 "jk";
+            row-gap: 2em;
+	    }
+    }
 }

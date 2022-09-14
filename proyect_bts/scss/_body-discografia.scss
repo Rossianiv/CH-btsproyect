@@ -76,7 +76,7 @@ main.grid-main-discografia {
 //mediaquerys
 
 @media only screen and (max-width: 1024px) {
-    #grid-main-discografia {
+    main.grid-main-discografia {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(10, 1fr) ;
         grid-template-areas:"cv1 cv2"
@@ -97,7 +97,7 @@ main.grid-main-discografia {
 }
 
 @media only screen and (max-width: 500px) {
-    #grid-main-discografia {
+    main.grid-main-discografia {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(19, 1fr) ;
         grid-template-areas:"cv1"

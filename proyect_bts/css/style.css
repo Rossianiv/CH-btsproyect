@@ -319,7 +319,7 @@ main.grid-main-discografia {
   grid-area: cv19; }
 
 @media only screen and (max-width: 1024px) {
-  #grid-main-discografia {
+  main.grid-main-discografia {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(10, 1fr);
     grid-template-areas: "cv1 cv2" "cv3 cv4" "cv5 cv6" "cv7 cv8" "cv9 cv10" "cv11 cv12" "cv13 cv14" "cv15 cv16" "cv17 cv18" "cv19 .";
@@ -327,7 +327,7 @@ main.grid-main-discografia {
     padding: 50px 15px; } }
 
 @media only screen and (max-width: 500px) {
-  #grid-main-discografia {
+  main.grid-main-discografia {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(19, 1fr);
     grid-template-areas: "cv1" "cv2" "cv3"  "cv4" "cv5"  "cv6" "cv7"  "cv8" "cv9"  "cv10" "cv11"  "cv12" "cv13"  "cv14" "cv15"  "cv16" "cv17"  "cv18" "cv19"; } }
@@ -341,139 +341,6 @@ div.style-cover {
 
 div:hover.style-cover {
   transform: translate3d(0px, 0px, -250px); }
-
-:root {
-  --typewriterSpeed: 5s; }
-
-main.main-index {
-  width: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "img-w img-w" "subt p" " memb memb " "disco disco";
-  justify-content: center;
-  align-items: center;
-  grid-gap: 3em;
-  padding: 4em 2em 3em 2em; }
-  main.main-index div.img-welcome {
-    grid-area: img-w; }
-    main.main-index div.img-welcome img {
-      height: 55vh;
-      border-radius: 9rem; }
-  main.main-index div.animated-sub {
-    grid-area: subt; }
-  main.main-index div.p-right {
-    grid-area: p; }
-    main.main-index div.p-right p {
-      margin: 1.5em;
-      font-size: 1.5rem;
-      font-family: 'Dosis';
-      opacity: 0;
-      transform: translateX(3rem);
-      animation: fadeInLeft 2s ease calc(var(--typewriterSpeed) + 4s) forwards; }
-  main.main-index div#memb {
-    grid-area: memb;
-    display: grid;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 2em; }
-    main.main-index div#memb div a {
-      text-decoration: none;
-      cursor: pointer; }
-      main.main-index div#memb div a h2 {
-        text-decoration: none; }
-  main.main-index div#disco {
-    grid-area: disco;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 2em; }
-    main.main-index div#disco div a {
-      text-decoration: none;
-      cursor: pointer; }
-      main.main-index div#disco div a h2 {
-        text-decoration: none; }
-
-.subt {
-  font-family: 'Dancing Script';
-  display: flex;
-  align-items: center;
-  font-size: 4rem;
-  padding: 0; }
-
-div.animated-pic {
-  transform: perspective(3000px) rotateY(5deg);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  transition: transform 1s ease 0s;
-  height: 35vh; }
-
-div.animated-pic a img {
-  height: 50vh;
-  padding: 0;
-  border-radius: 1rem; }
-
-div.animated-pic:hover {
-  transform: perspective(1500px) rotateY(15deg); }
-
-.animated-sub-2 {
-  animation: gradiente-subt 10s ease-in-out 1s infinite reverse;
-  background-image: linear-gradient(219deg, #22c1c3 29%, #9c2dfd 100%);
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.animated-sub {
-  position: relative;
-  place-content: center;
-  text-align: center;
-  width: max-content;
-  margin-left: 1em;
-  font-size: 3rem; }
-
-h2.animated-sub::before, h2.animated-sub::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-h2.animated-sub::before {
-  background: linear-gradient(32deg, #dab8d3 0%, #cdb6db 93%);
-  animation: typewriter 5s steps(24) 3s forwards; }
-
-h2.animated-sub::after {
-  width: 0.125em;
-  background: black;
-  animation: typewriter 5s steps(24) 3s forwards, blink 750ms steps(24) infinite; }
-
-@keyframes typewriter {
-  to {
-    left: 100%; } }
-
-@keyframes blink {
-  to {
-    background: transparent; } }
-
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes gradiente-subt {
-  0% {
-    background-position: 0 50%; }
-  25% {
-    background-position: 75% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  75% {
-    font-size: 75% 50%; }
-  100% {
-    background-position: 0 50%; } }
 
 .contenido-dico {
   height: 100%;
@@ -606,9 +473,34 @@ h2.animated-sub::after {
   100% {
     transform: translateX(100%); } }
 
-@media screen and (max-width: 768px) {
-  .contenedor {
-    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "widget-1 widget-1 widget-2" "footer footer footer"; } }
+@media screen and (max-width: 1024px) {
+  .contenido-dico {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "cov song-l" "videos about"  " galery galery";
+    row-gap: 2em; }
+    .contenido-dico div.widget-2 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "tt-g tt-g" "nj sj" "yg hs" "jm th" "jk ."; } }
+
+@media screen and (max-width: 500px) {
+  .contenido-dico {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "cov" "song-l" "about"    "videos"  "galery";
+    row-gap: 2em; }
+    .contenido-dico div, .contenido-dico aside {
+      height: auto;
+      width: 400px;
+      padding: 0;
+      margin: 0;
+      max-width: 100%; }
+    .contenido-dico div.widget-2 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5 repeat(7, 1fr);
+      grid-template-areas: "tt-g" "nj"  "sj" "yg" "hs" "jm" "th" "jk";
+      row-gap: 2em; } }
 
 * {
   box-sizing: border-box;
