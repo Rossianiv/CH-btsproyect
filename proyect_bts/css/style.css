@@ -350,14 +350,14 @@ div:hover.style-cover {
     align-items: flex-start; }
     .contenido-dico div.cov a img {
       width: max-content;
-      height: 26em;
+      height: 24em;
       border-radius: 1.2rem;
       padding: 0; }
   .contenido-dico div.song-l {
     grid-area: song-l;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: center; }
     .contenido-dico div.song-l ul li {
       font-family: "Dosis";
@@ -367,17 +367,15 @@ div:hover.style-cover {
     grid-area: videos;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: center; }
-    .contenido-dico aside.sidebar div {
-      width: max-content;
-      height: 24em; }
-      .contenido-dico aside.sidebar div iframe {
-        width: max-content;
-        height: 24em;
-        padding: 0;
-        margin-bottom: 1em; }
+    text-align: center;
+    padding: 0; }
+    .contenido-dico aside.sidebar div iframe {
+      width: 27em;
+      height: 12em;
+      border-radius: 1.2rem;
+      margin-bottom: 1em; }
   .contenido-dico div.widget-1 {
     grid-area: about; }
     .contenido-dico div.widget-1 p {
