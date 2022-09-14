@@ -138,6 +138,11 @@ main.main-index {
     justify-content: space-around;
     align-items: center;
     padding-top: 2em; }
+    main.main-index div#memb div a {
+      text-decoration: none;
+      cursor: pointer; }
+      main.main-index div#memb div a h2 {
+        text-decoration: none; }
   main.main-index div#disco {
     grid-area: disco;
     display: flex;
@@ -145,6 +150,11 @@ main.main-index {
     justify-content: space-around;
     align-items: center;
     padding-top: 2em; }
+    main.main-index div#disco div a {
+      text-decoration: none;
+      cursor: pointer; }
+      main.main-index div#disco div a h2 {
+        text-decoration: none; }
 
 .subt {
   font-family: 'Dancing Script';
@@ -217,11 +227,11 @@ h2.animated-sub::after {
   0% {
     background-position: 0 50%; }
   25% {
-    background-position: 100% 50%; }
+    background-position: 75% 50%; }
   50% {
     background-position: 100% 50%; }
   75% {
-    font-size: 3.5rem; }
+    font-size: 75% 50%; }
   100% {
     background-position: 0 50%; } }
 
@@ -343,10 +353,13 @@ div:hover.style-cover {
   --color-secundario: #c9a4e2; }
 
 a {
-  display: block; }
+  display: block;
+  font-weight: bold;
+  text-decoration: none; }
 
 p a {
-  display: inline; }
+  display: inline;
+  font-weight: bold; }
 
 li {
   list-style-type: none; }

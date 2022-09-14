@@ -52,7 +52,16 @@ main.main-index {
         justify-content: space-around;
         align-items: center;    
         padding-top: 2em;   
-        
+        div {
+            a {
+                text-decoration: none;
+                cursor: pointer; 
+                h2 {
+                    text-decoration: none;
+                }
+            }
+        }
+       
     }
 
     
@@ -65,7 +74,16 @@ main.main-index {
             flex-direction: row-reverse;
             justify-content: space-around;
             align-items: center;    
-            padding-top: 2em;        
+            padding-top: 2em; 
+            div {
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    h2 {
+                        text-decoration: none;
+                    }
+                }
+            }       
             
 }
 
@@ -126,6 +144,7 @@ h2.animated-sub::before, h2.animated-sub::after  {
     right: 0;
     bottom: 0;
     left: 0;
+
     
 }
 
@@ -168,7 +187,7 @@ h2.animated-sub::after {
     }
 
     25% {
-        background-position: 100% 50%;
+        background-position: 75% 50%;
     }
 
     50% {
@@ -176,7 +195,7 @@ h2.animated-sub::after {
     }
 
     75%{
-        font-size: 3.5rem;
+        font-size: 75% 50%;
     }
 
     100% {
