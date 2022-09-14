@@ -253,15 +253,6 @@ main.grid-main-discografia {
     margin: 0;
     max-width: 100%; }
 
-#discografia {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin: auto;
-  color: #5C2880; }
-
-#discografia div li {
-  color: black; }
-
 #cv1 {
   grid-area: cv1; }
 
@@ -342,6 +333,56 @@ div.style-cover {
 
 div:hover.style-cover {
   transform: translate3d(0px, 0px, -250px); }
+
+.contenido-dico {
+  width: 100%;
+  display: grid;
+  grid-gap: 1.3em;
+  padding: 5em;
+  grid-template-columns: 20% 20% 60%;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "cov song-l galery" "about videos galery"; }
+  .contenido-dico div.cov {
+    grid-area: cov; }
+    .contenido-dico div.cov a img {
+      width: auto;
+      height: 50em;
+      border-radius: 1.2rem; }
+  .contenido-dico div.song-l {
+    grid-area: song-l;
+    display: flexbox;
+    justify-content: center;
+    align-items: center; }
+    .contenido-dico div.song-l ul li {
+      list-style-type: none; }
+  .contenido-dico aside.sidebar {
+    grid-area: videos;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-height: 6.2rem; }
+    .contenido-dico aside.sidebar div iframe {
+      width: auto;
+      height: 70vh; }
+  .contenido-dico div.widget-1 {
+    grid-area: about; }
+    .contenido-dico div.widget-1 p {
+      font-family: 'Dosis'; }
+  .contenido-dico div.widget-2 {
+    grid-area: galery; }
+    .contenido-dico div.widget-2 img {
+      width: auto;
+      height: 40vh; }
+
+.subt-2 {
+  font-family: 'Dancing Script';
+  font-size: 3em; }
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "widget-1 widget-1 widget-2" "footer footer footer"; } }
 
 * {
   box-sizing: border-box;

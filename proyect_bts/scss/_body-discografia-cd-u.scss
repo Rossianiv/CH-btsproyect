@@ -1,0 +1,80 @@
+.contenido-dico {
+	width: 100%;
+	display: grid;
+	grid-gap: 1.3em;
+    padding: 5em;
+	grid-template-columns: 20% 20% 60%;
+	grid-template-rows: repeat(2, auto);
+
+	grid-template-areas: "cov song-l galery"
+						 "about videos galery"
+						 ;
+                         div.cov {
+                            grid-area: cov;
+                            a {
+                                img {
+                                    width: auto;
+                                    height: 50em;
+                                    border-radius: 1.2rem;
+                                }
+                            }
+                         }
+                         div.song-l {
+                            grid-area: song-l;
+                            display: flexbox;
+                            justify-content: center;
+                            align-items: center;
+                            ul {
+                                
+                               li {
+                                list-style-type: none;
+                               }
+                            }
+                         }
+                         aside.sidebar {
+                            grid-area: videos;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            text-align: center;
+                            min-height: 6.2rem;
+                            div {
+                                iframe {
+                                    width: auto;
+                                    height: 70vh;
+                                }
+                            }
+                         }
+                         div.widget-1 {
+                            grid-area: about;
+                            p {
+                                font-family: 'Dosis';
+                            }
+                         } 
+                         div.widget-2 {
+                            grid-area: galery;
+                            img {
+                                width: auto;
+                                height: 40vh;                                
+                            }
+                         }
+}
+
+//clases y ids
+
+.subt-2 {
+    font-family: 'Dancing Script';
+    font-size: 3em;
+}
+
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-1 widget-2"
+						 "footer footer footer";
+	}
+}

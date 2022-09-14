@@ -30,18 +30,6 @@ main.grid-main-discografia {
 
 //clases y id's
 
-#discografia {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: auto; 
-    color: #5C2880;      
-}
-
-#discografia div li  { 
-    color: black;      
-}
-
-
 #cv1 {
     grid-area: cv1;
 }
