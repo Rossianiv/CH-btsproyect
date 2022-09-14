@@ -335,50 +335,69 @@ div:hover.style-cover {
   transform: translate3d(0px, 0px, -250px); }
 
 .contenido-dico {
+  height: 100%;
   width: 100%;
   display: grid;
   grid-gap: 1.3em;
-  padding: 5em;
-  grid-template-columns: 20% 20% 60%;
+  padding: 4em;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "cov song-l galery" "about videos galery"; }
+  grid-template-areas: "cov song-l videos" "about galery galery"; }
   .contenido-dico div.cov {
-    grid-area: cov; }
+    grid-area: cov;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
     .contenido-dico div.cov a img {
-      width: auto;
-      height: 50em;
-      border-radius: 1.2rem; }
+      width: max-content;
+      height: 26em;
+      border-radius: 1.2rem;
+      padding: 0; }
   .contenido-dico div.song-l {
     grid-area: song-l;
-    display: flexbox;
+    display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: flex-start;
+    text-align: center; }
     .contenido-dico div.song-l ul li {
-      list-style-type: none; }
+      font-family: "Dosis";
+      list-style-type: none;
+      font-size: 1em; }
   .contenido-dico aside.sidebar {
     grid-area: videos;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    min-height: 6.2rem; }
-    .contenido-dico aside.sidebar div iframe {
-      width: auto;
-      height: 70vh; }
+    text-align: center; }
+    .contenido-dico aside.sidebar div {
+      width: max-content;
+      height: 24em; }
+      .contenido-dico aside.sidebar div iframe {
+        width: max-content;
+        height: 24em;
+        padding: 0;
+        margin-bottom: 1em; }
   .contenido-dico div.widget-1 {
     grid-area: about; }
     .contenido-dico div.widget-1 p {
-      font-family: 'Dosis'; }
+      font-family: "Dosis"; }
   .contenido-dico div.widget-2 {
-    grid-area: galery; }
+    grid-area: galery;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .contenido-dico div.widget-2 img {
       width: auto;
       height: 40vh; }
 
 .subt-2 {
-  font-family: 'Dancing Script';
-  font-size: 3em; }
+  font-family: "Dancing Script";
+  font-size: 2em;
+  padding-bottom: 1em; }
 
 @media screen and (max-width: 768px) {
   .contenedor {
