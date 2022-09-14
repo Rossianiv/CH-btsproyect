@@ -1,5 +1,13 @@
 $font-1:  'Dancing Script' ; 
 $font-2: 'Dosis' ; 
+$bg-2: #1f2232;
+$f-color-2 : #bfbbe1;
+
+@import 'body-index';
+//body-discografia
+
+
+
 
 .contenido-dico {
     height: 100%;
@@ -7,11 +15,11 @@ $font-2: 'Dosis' ;
 	display: grid;
 	grid-gap: 1.3em;
     padding: 4em;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: repeat(2, auto);
 
-	grid-template-areas: "cov song-l videos"
-						 "about galery galery"
+	grid-template-areas: "cov cov song-l song-l about about"
+						 "videos videos videos galery galery galery"
 						 ;
                          div.cov {
                             grid-area: cov;
@@ -61,7 +69,7 @@ $font-2: 'Dosis' ;
                                 }
                             }
                          }
-                         div.widget-1 {
+                         div.p-left-bg {
                             grid-area: about;
                             p {
                                 font-family: $font-2;
@@ -69,15 +77,47 @@ $font-2: 'Dosis' ;
                          } 
                          div.widget-2 {
                             grid-area: galery;
-                            display: flex;
-                            flex-direction: column;
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: .5fr 1fr 1fr;
+                            grid-template-areas: "tt-g tt-g tt-g tt-g"
+                                                 "nj sj yg hs"
+                                                 "jm th jk .";
                             justify-content: space-between;
                             justify-content: center;
                             align-items: center;
                             text-align: center;
+                            grid-gap: .5em;
+                            div.title-galery {
+                                grid-area: tt-g;
+                            }
+                            div.img-nj {
+                                grid-area: nj;
+                            }
+                            div.img-sj {
+                                grid-area: sj;
+                            }
+                            div.img-yg {
+                                grid-area: yg;
+                            }
+                            div.img-hs {
+                                grid-area: hs;
+                            }
+                            div.img-jm {
+                                grid-area: jm;
+                            }
+                            div.img-th {
+                                grid-area: th;
+                            }div.img-jk {
+                                grid-area: jk;
+                            }
                             img {
-                                width: auto;
-                                height: 40vh;                                
+                                height: auto ;
+                                width: 400px;
+                                padding: 0;
+                                margin: 0;
+                                max-width: 100%; 
+                                border-radius: 1.2rem;           
                             }
                          }
 }
@@ -87,8 +127,77 @@ $font-2: 'Dosis' ;
 .subt-2 {
     font-family: $font-1;
     font-size: 2em;
-    padding-bottom: 1em;
+    padding: 2em 0 1em 0;
 }
+
+.trt-img {
+    width: 100%;
+    margin: .7em .7em ;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+}
+
+.trt-img:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
+  
+  .block-reveal {
+    --t: calc(var(--td) + var(--d));
+  
+    color: transparent;
+    padding: 4px;
+  
+    position: relative;
+    overflow: hidden;
+  
+    animation: revealBlock 0s var(--t) forwards;
+  }
+  
+  .block-reveal::after {
+    content: '';
+  
+    width: 0%;
+    height: 100%;
+    padding-bottom: 4px;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    background: var(--bc);
+    animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+  }
+  
+  
+  /* animations */
+  @keyframes revealBlock {
+    100% {
+      color: #0f0f0f;
+    }
+  }
+  
+  @keyframes revealingIn {
+  
+    0% {
+      width: 0;
+    }
+  
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes revealingOut {
+  
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(100%);
+    }
+  
+  }
 
 
 @media screen and (max-width: 768px){

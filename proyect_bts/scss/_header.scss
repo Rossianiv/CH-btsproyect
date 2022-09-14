@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Dosis:wght@500&family=Noto+Serif+KR:wght@500&family=Sacramento&display=swap');
 
+$bg-1 : #805fb6 ;
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1em 8%;
-    background-color:#805fb6; 
+    background-color:$bg-1; 
     min-height: 16vh;
 
     div {
@@ -42,7 +43,7 @@ header {
                 font-family: "Dosis";
                 font-size: 1.5rem;
                 font-weight: 500;
-                color: #5C2880;
+                color: rgb(34, 18, 36);
                
                 a {
                     text-decoration: none;
@@ -94,15 +95,19 @@ header {
                 }
             }
             h1 {
-                font-size: 3rem;   
+                a {
+                   font-size: 2rem;  
+                }
+                  
             }
        }
        nav {
             ul{
                 li {
-                    font-size: 5px;
+                    a {
+                    font-size: 1.5rem;
                     padding-top: 10px;
-                }
+                }}
             }
        }
     }
