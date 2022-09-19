@@ -23,14 +23,15 @@ $f-color-2 : #bfbbe1;
                             grid-area: cov;
                             display: flex;
                             justify-content: center;
-                            align-items: flex-start;
+                            align-items: center;
                             a {
                                 img {
-                                    width: max-content;
-                                    height: 23em;
-                                    border-radius: 1.2rem;
+                                    height: auto ;
+                                    width: 23em;
                                     padding: 0;
-                                    
+                                    margin: 0;
+                                    max-width: 100%;
+                                    border-radius: 1.2rem;
                                 }
                             }
                          }
@@ -38,10 +39,10 @@ $f-color-2 : #bfbbe1;
                             grid-area: song-l;
                             display: flex;
                             justify-content: center;
-                            align-items: flex-start;
+                            align-items: center;
                             text-align: left;
                             ul {
-                                h3 {
+                                h2 {
                                     text-align: center;
                                 }
                                li {
@@ -58,11 +59,12 @@ $f-color-2 : #bfbbe1;
                             justify-content: center;
                             align-items: center;
                             text-align: center;
-                            padding: 0;
+                            
                             div {
-
+                                
                                 iframe {
-                                    width: 27em;
+                                    padding: 0;
+                                    width: 29em;
                                     height: 12em;
                                     border-radius: 1.2rem;
                                     margin-bottom: 1em;
@@ -73,7 +75,7 @@ $f-color-2 : #bfbbe1;
                             grid-area: about;
                             display: flex;
                             justify-content: center;
-                            align-items: flex-start;
+                            align-items: center;
                             
                             p {
                                 font-family: $font-2;

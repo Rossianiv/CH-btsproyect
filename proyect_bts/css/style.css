@@ -256,7 +256,7 @@ main.grid-main-discografia {
   padding: 1em; }
   main.grid-main-discografia div.style-cover a img {
     height: auto;
-    width: 400px;
+    width: 25em;
     padding: 0;
     margin: 0;
     max-width: 100%; }
@@ -355,19 +355,21 @@ div:hover.style-cover {
     grid-area: cov;
     display: flex;
     justify-content: center;
-    align-items: flex-start; }
+    align-items: center; }
     .contenido-dico div.cov a img {
-      width: max-content;
-      height: 23em;
-      border-radius: 1.2rem;
-      padding: 0; }
+      height: auto;
+      width: 23em;
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+      border-radius: 1.2rem; }
   .contenido-dico div.song-l {
     grid-area: song-l;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: left; }
-    .contenido-dico div.song-l ul h3 {
+    .contenido-dico div.song-l ul h2 {
       text-align: center; }
     .contenido-dico div.song-l ul li {
       font-family: "Dosis";
@@ -379,10 +381,10 @@ div:hover.style-cover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 0; }
+    text-align: center; }
     .contenido-dico aside.sidebar div iframe {
-      width: 27em;
+      padding: 0;
+      width: 29em;
       height: 12em;
       border-radius: 1.2rem;
       margin-bottom: 1em; }
@@ -390,7 +392,7 @@ div:hover.style-cover {
     grid-area: about;
     display: flex;
     justify-content: center;
-    align-items: flex-start; }
+    align-items: center; }
     .contenido-dico div.p-left-bg p {
       font-family: "Dosis";
       text-align: right; }
