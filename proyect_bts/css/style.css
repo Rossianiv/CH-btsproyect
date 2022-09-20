@@ -68,6 +68,26 @@ header {
       font-size: 1.5rem;
       padding-top: 10px; } }
 
+@media only screen and (max-width: 580px) {
+  header {
+    flex-direction: row;
+    padding: 1em 8%; }
+    header div a img.logo {
+      width: auto;
+      height: 9vh; }
+    header div h1 a {
+      font-size: 1rem; }
+    header nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      header nav ul li {
+        padding: 0;
+        margin: 0; }
+        header nav ul li a {
+          font-size: 1rem;
+          padding-top: .3rem; } }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -516,6 +536,103 @@ div:hover.style-cover {
       grid-template-rows: 0.5 repeat(8, 1fr);
       grid-template-areas: "tt-g" "nj"  "sj" "yg" "hs" "jm" "th" "jk" "link-discografia";
       row-gap: 2em; } }
+
+main.grid-main-miembros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "foto-bts foto-bts description" "seokjin yoongi ."                          ". hoseok namjoon" "jimin taehyung ." ". jungkook .";
+  padding: 3em;
+  grid-gap: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  main.grid-main-miembros div.bts-description {
+    grid-area: description; }
+    main.grid-main-miembros div.bts-description h2 {
+      text-align: center; }
+    main.grid-main-miembros div.bts-description p {
+      text-align: justify;
+      font-family: 'Dosis'; }
+  main.grid-main-miembros div.bts-foto {
+    grid-area: foto-bts;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main.grid-main-miembros div.bts-foto img {
+      padding: 2em;
+      height: 50em;
+      width: auto;
+      max-width: auto; }
+  main.grid-main-miembros div.m-sj {
+    grid-area: seokjin; }
+  main.grid-main-miembros div.m-yg {
+    grid-area: yoongi; }
+  main.grid-main-miembros div.m-hs {
+    grid-area: hoseok; }
+  main.grid-main-miembros div.m-nj {
+    grid-area: namjoon; }
+  main.grid-main-miembros div.m-jm {
+    grid-area: jimin; }
+  main.grid-main-miembros div.m-th {
+    grid-area: taehyung; }
+  main.grid-main-miembros div.m-jk {
+    grid-area: jungkook; }
+  main.grid-main-miembros div.flip-box {
+    position: relative;
+    width: auto;
+    height: 30em;
+    perspective: 62.5em; }
+    main.grid-main-miembros div.flip-box div.flip-imagen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all .7s ease;
+      box-shadow: 0px 0px 10px 2px grey;
+      border-radius: 1em; }
+      main.grid-main-miembros div.flip-box div.flip-imagen div.front-part {
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; }
+        main.grid-main-miembros div.flip-box div.flip-imagen div.front-part img {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+          max-width: auto; }
+      main.grid-main-miembros div.flip-box div.flip-imagen div.back-part {
+        transform: rotateY(180deg);
+        background: black;
+        padding: 1.2em;
+        color: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        font-family: 'Dosis';
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        main.grid-main-miembros div.flip-box div.flip-imagen div.back-part h2 {
+          font-family: 'Dancing Script';
+          padding-bottom: 2em; }
+
+.flip-imagen:hover {
+  transform: rotateY(180deg); }
+
+@media only screen and (max-width: 1024px) {
+  main.grid-main-miembros {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "foto-bts foto-bts foto-bts" "description description description" "seokjin yoongi ."                          ". hoseok namjoon" "jimin taehyung ." ". jungkook .";
+    padding: 2em;
+    grid-gap: 2em; } }
 
 * {
   box-sizing: border-box;

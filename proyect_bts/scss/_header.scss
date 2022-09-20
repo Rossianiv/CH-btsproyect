@@ -112,3 +112,38 @@ header {
        }
     }    
 }
+
+@media only screen and (max-width: 580px) { 
+    header {
+        flex-direction: row;
+        padding: 1em 8%;
+        div {
+             a {
+                 img.logo {
+                     width: auto;
+                     height: 9vh;
+                 }
+             }
+             h1 {
+                 a {
+                    font-size: 1rem;  
+                 }
+                   
+             }
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+             ul{
+                 li {
+                    padding: 0;
+                    margin: 0;
+                     a {
+                     font-size: 1rem;
+                     padding-top: .3rem;
+                 }}
+             }
+        }
+     } 
+}
