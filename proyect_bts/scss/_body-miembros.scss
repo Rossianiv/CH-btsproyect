@@ -59,9 +59,9 @@ main.grid-main-miembros {
     div.flip-box {
         position: relative;
         width: auto;
-        height: 30em;
+        height: 70vh;
         perspective: 62.5em;
-        max-width: 100%;
+        max-height: 100%;
         div.flip-imagen {
             position: absolute;
             width: 100%;
