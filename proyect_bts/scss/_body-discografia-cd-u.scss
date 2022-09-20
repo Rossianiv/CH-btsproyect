@@ -14,10 +14,11 @@ $f-color-2 : #bfbbe1;
 	grid-gap: 1.3em;
     padding: 4em;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(2, auto);
+	grid-template-rows: repeat(3, auto);
 
-	grid-template-areas: "cov cov song-l song-l about about"
-						 "videos videos galery galery galery galery"
+	grid-template-areas: "cov cov cov about about about"
+						 "song-l song-l videos videos videos videos"
+                         "galery galery galery galery galery galery"
 						 ;
                          div.cov {
                             grid-area: cov;
@@ -40,7 +41,7 @@ $f-color-2 : #bfbbe1;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            text-align: left;
+                            text-align: center;
                             ul {
                                 h2 {
                                     text-align: center;
@@ -56,18 +57,18 @@ $f-color-2 : #bfbbe1;
                             grid-area: videos;
                             display: flex;
                             flex-direction: column;
-                            justify-content: center;
+                            justify-content: space-around;
                             align-items: center;
                             text-align: center;
                             
                             div {
                                 
                                 iframe {
-                                    padding: 0;
+                                    padding: 0px;
                                     width: 29em;
-                                    height: 12em;
+                                    height: 19em;
                                     border-radius: 1.2rem;
-                                    margin-bottom: 1em;
+                                    margin-bottom: 2em;
                                 }
                             }
                          }
@@ -87,11 +88,10 @@ $f-color-2 : #bfbbe1;
                             grid-area: galery;
                             display: grid;
                             grid-template-columns: repeat(4, 1fr);
-                            grid-template-rows: .5fr 1fr 1fr;
+                            grid-template-rows: 14vh 1fr 1fr;
                             grid-template-areas: "tt-g tt-g tt-g tt-g"
                                                  "nj sj yg hs"
-                                                 "jm th jk .";
-                            justify-content: space-between;
+                                                 "jm th jk link-discografia";
                             justify-content: center;
                             align-items: center;
                             text-align: center;
@@ -118,6 +118,13 @@ $f-color-2 : #bfbbe1;
                                 grid-area: th;
                             }div.img-jk {
                                 grid-area: jk;
+                            }div.link-discografia {
+                                grid-area: link-discografia;
+                                display: flexbox;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center; 
+                                margin: 1em;
                             }
                             img {
                                 height: auto ;
@@ -212,9 +219,10 @@ $f-color-2 : #bfbbe1;
 @media screen and (max-width: 1024px){
 	.contenido-dico {
     grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, auto);
-	grid-template-areas: "cov song-l"
-						 "videos about" 
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: "cov about"
+						 "song-l song-l"
+                         "videos videos" 
                          " galery galery";
     row-gap: 2em;
 
@@ -225,7 +233,7 @@ $f-color-2 : #bfbbe1;
                                 "nj sj"
                                 "yg hs"
                                 "jm th"
-                                "jk .";
+                                "jk link-discografia";
              
         }
 
@@ -237,9 +245,9 @@ $f-color-2 : #bfbbe1;
 	.contenido-dico {
     grid-template-columns: 1fr;
 	grid-template-rows: repeat(5, auto);
-	grid-template-areas: "cov"
-                         "song-l"
-                         "about"   
+	grid-template-areas: "about"
+                         "cov"
+                         "song-l"   
 						 "videos" 
                          "galery";
     row-gap: 2em;
@@ -253,7 +261,7 @@ $f-color-2 : #bfbbe1;
 
         div.widget-2 {
             grid-template-columns: 1fr;
-            grid-template-rows: 0.5 repeat(7, 1fr);
+            grid-template-rows: 0.5 repeat(8, 1fr);
             grid-template-areas: "tt-g"
                                  "nj" 
                                  "sj"
@@ -261,7 +269,8 @@ $f-color-2 : #bfbbe1;
                                  "hs"
                                  "jm"
                                  "th"
-                                 "jk";
+                                 "jk"
+                                 "link-discografia";
             row-gap: 2em;
 	    }
     }

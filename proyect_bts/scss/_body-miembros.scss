@@ -1,0 +1,52 @@
+.main-miembros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)  ;
+    grid-template-rows: repeat(5, auto) ;
+    grid-template-areas: "foto-bts foto-bts description"
+                         "seokjin yoongi ."                         
+                         ". hoseok namjoon"
+                         "jimin taehyung ."
+                         ". jungkook .";
+    margin: 3em;
+    grid-gap: 2em;
+    div {
+        grid-area: description;
+        h2{
+
+        }
+        p {
+            
+        }
+    }
+    div {
+        grid-area: foto-bts;
+        img {
+
+        }
+    }
+    div.m-sk {
+        grid-area: seokjin;
+    }
+    div.m-yg {
+        grid-area: yoongi;
+    }
+    div.m-hs {
+        grid-area: hoseok;
+    }
+    div.m-nj {
+        grid-area: namjoon;
+    }
+    div.m-jm {
+        grid-area: jimin;
+    }
+    div.m-th {
+        grid-area: taehyung;
+    }
+    div.m-jk {
+        grid-area: jungkook;
+    }
+}
+
+.flip-box {
+
+}

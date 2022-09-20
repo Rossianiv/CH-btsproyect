@@ -349,8 +349,8 @@ div:hover.style-cover {
   grid-gap: 1.3em;
   padding: 4em;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "cov cov song-l song-l about about" "videos videos galery galery galery galery"; }
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "cov cov cov about about about" "song-l song-l videos videos videos videos" "galery galery galery galery galery galery"; }
   .contenido-dico div.cov {
     grid-area: cov;
     display: flex;
@@ -368,7 +368,7 @@ div:hover.style-cover {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left; }
+    text-align: center; }
     .contenido-dico div.song-l ul h2 {
       text-align: center; }
     .contenido-dico div.song-l ul li {
@@ -379,15 +379,15 @@ div:hover.style-cover {
     grid-area: videos;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center; }
     .contenido-dico aside.sidebar div iframe {
-      padding: 0;
+      padding: 0px;
       width: 29em;
-      height: 12em;
+      height: 19em;
       border-radius: 1.2rem;
-      margin-bottom: 1em; }
+      margin-bottom: 2em; }
   .contenido-dico div.p-left-bg {
     grid-area: about;
     display: flex;
@@ -400,9 +400,8 @@ div:hover.style-cover {
     grid-area: galery;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: .5fr 1fr 1fr;
-    grid-template-areas: "tt-g tt-g tt-g tt-g" "nj sj yg hs" "jm th jk .";
-    justify-content: space-between;
+    grid-template-rows: 14vh 1fr 1fr;
+    grid-template-areas: "tt-g tt-g tt-g tt-g" "nj sj yg hs" "jm th jk link-discografia";
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -423,6 +422,13 @@ div:hover.style-cover {
       grid-area: th; }
     .contenido-dico div.widget-2 div.img-jk {
       grid-area: jk; }
+    .contenido-dico div.widget-2 div.link-discografia {
+      grid-area: link-discografia;
+      display: flexbox;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 1em; }
     .contenido-dico div.widget-2 img {
       height: auto;
       width: 400px;
@@ -485,19 +491,19 @@ div:hover.style-cover {
 @media screen and (max-width: 1024px) {
   .contenido-dico {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "cov song-l" "videos about"  " galery galery";
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "cov about" "song-l song-l" "videos videos"  " galery galery";
     row-gap: 2em; }
     .contenido-dico div.widget-2 {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(5, auto);
-      grid-template-areas: "tt-g tt-g" "nj sj" "yg hs" "jm th" "jk ."; } }
+      grid-template-areas: "tt-g tt-g" "nj sj" "yg hs" "jm th" "jk link-discografia"; } }
 
 @media screen and (max-width: 500px) {
   .contenido-dico {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
-    grid-template-areas: "cov" "song-l" "about"    "videos"  "galery";
+    grid-template-areas: "about" "cov" "song-l"    "videos"  "galery";
     row-gap: 2em; }
     .contenido-dico div, .contenido-dico aside {
       height: auto;
@@ -507,8 +513,8 @@ div:hover.style-cover {
       max-width: 100%; }
     .contenido-dico div.widget-2 {
       grid-template-columns: 1fr;
-      grid-template-rows: 0.5 repeat(7, 1fr);
-      grid-template-areas: "tt-g" "nj"  "sj" "yg" "hs" "jm" "th" "jk";
+      grid-template-rows: 0.5 repeat(8, 1fr);
+      grid-template-areas: "tt-g" "nj"  "sj" "yg" "hs" "jm" "th" "jk" "link-discografia";
       row-gap: 2em; } }
 
 * {
