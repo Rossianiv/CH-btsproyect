@@ -6,126 +6,125 @@
     padding: 4em;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: repeat(3, auto);
-
 	grid-template-areas: "cov cov cov about about about"
 						 "song-l song-l videos videos videos videos"
                          "galery galery galery galery galery galery"
 						 ;
-                         div.cov {
-                            grid-area: cov;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            a {
-                                img {
-                                    height: auto ;
-                                    width: 23em;
-                                    padding: 0;
-                                    margin: 0;
-                                    max-width: 100%;
-                                    border-radius: 1.2rem;
-                                }
-                            }
-                         }
-                         div.song-l {
-                            grid-area: song-l;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-align: center;
-                            ul {
-                                h2 {
-                                    text-align: center;
-                                }
-                               li {
-                                font-family: $font-2;
-                                list-style-type: none;
-                                font-size: 1em;
-                               }
-                            }
-                         }
-                         aside.sidebar {
-                            grid-area: videos;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            align-items: center;
-                            text-align: center;
-                            
-                            div {
-                                
-                                iframe {
-                                    padding: 0px;
-                                    width: 29em;
-                                    height: 19em;
-                                    border-radius: 1.2rem;
-                                    margin-bottom: 2em;
-                                }
-                            }
-                         }
-                         div.p-left-bg {
-                            grid-area: about;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            
-                            p {
-                                font-family: $font-2;
-                                text-align: right;
-                                
-                            }
-                         } 
-                         div.widget-2 {
-                            grid-area: galery;
-                            display: grid;
-                            grid-template-columns: repeat(4, 1fr);
-                            grid-template-rows: 14vh 1fr 1fr;
-                            grid-template-areas: "tt-g tt-g tt-g tt-g"
-                                                 "nj sj yg hs"
-                                                 "jm th jk link-discografia";
-                            justify-content: center;
-                            align-items: center;
-                            text-align: center;
-                            grid-gap: .5em;
-                            div.title-galery {
-                                grid-area: tt-g;
-                            }
-                            div.img-nj {
-                                grid-area: nj;
-                            }
-                            div.img-sj {
-                                grid-area: sj;
-                            }
-                            div.img-yg {
-                                grid-area: yg;
-                            }
-                            div.img-hs {
-                                grid-area: hs;
-                            }
-                            div.img-jm {
-                                grid-area: jm;
-                            }
-                            div.img-th {
-                                grid-area: th;
-                            }div.img-jk {
-                                grid-area: jk;
-                            }div.link-discografia {
-                                grid-area: link-discografia;
-                                display: flexbox;
-                                justify-content: center;
-                                align-items: center;
-                                text-align: center; 
-                                margin: 1em;
-                            }
-                            img {
-                                height: auto ;
-                                width: 400px;
-                                padding: 0;
-                                margin: 0;
-                                max-width: 100%; 
-                                border-radius: 1.2rem;           
-                            }
-                         }
+        div.cov {
+        grid-area: cov;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            img {
+                height: auto ;
+                width: 23em;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                border-radius: 1.2rem;
+            }
+        }
+        }
+        div.song-l {
+        grid-area: song-l;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        ul {
+            h2 {
+                text-align: center;
+            }
+            li {
+            font-family: $font-2;
+            list-style-type: none;
+            font-size: 1em;
+            }
+        }
+        }
+        aside.sidebar {
+        grid-area: videos;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        
+        div {
+            
+            iframe {
+                padding: 0px;
+                width: 29em;
+                height: 19em;
+                border-radius: 1.2rem;
+                margin-bottom: 2em;
+            }
+        }
+        }
+        div.p-left-bg {
+        grid-area: about;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        p {
+            font-family: $font-2;
+            text-align: right;
+            
+        }
+        } 
+        div.widget-2 {
+        grid-area: galery;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 14vh 1fr 1fr;
+        grid-template-areas: "tt-g tt-g tt-g tt-g"
+                                "nj sj yg hs"
+                                "jm th jk link-discografia";
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-gap: .5em;
+        div.title-galery {
+            grid-area: tt-g;
+        }
+        div.img-nj {
+            grid-area: nj;
+        }
+        div.img-sj {
+            grid-area: sj;
+        }
+        div.img-yg {
+            grid-area: yg;
+        }
+        div.img-hs {
+            grid-area: hs;
+        }
+        div.img-jm {
+            grid-area: jm;
+        }
+        div.img-th {
+            grid-area: th;
+        }div.img-jk {
+            grid-area: jk;
+        }div.link-discografia {
+            grid-area: link-discografia;
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            margin: 1em;
+        }
+        img {
+            height: auto ;
+            width: 400px;
+            padding: 0;
+            margin: 0;
+            max-width: 100%; 
+            border-radius: 1.2rem;           
+        }
+        }
 }
 
 //clases y ids, transiciones, transformaciones
@@ -227,7 +226,11 @@
                                 "jk link-discografia";
              
         }
-
+        div.p-left-bg {   
+            p {
+                text-align: justify;    
+            }
+            } 
 	}
     
 }
@@ -264,5 +267,10 @@
                                  "link-discografia";
             row-gap: 2em;
 	    }
+        div.p-left-bg {   
+            p {
+                text-align: center;    
+            }
+            } 
     }
 }

@@ -1,12 +1,13 @@
 main.grid-main-miembros {
     display: grid;
     grid-template-columns: repeat(3, 1fr)  ;
-    grid-template-rows: repeat(5, auto) ;
+    grid-template-rows: repeat(6, auto) ;
     grid-template-areas: "foto-bts foto-bts description"
                          "seokjin yoongi ."                         
                          ". hoseok namjoon"
                          "jimin taehyung ."
-                         ". jungkook .";
+                         ". jungkook ."
+                         ". link-m .";
     padding: 3em;
     grid-gap: 2em;
     justify-content: center;
@@ -106,7 +107,9 @@ main.grid-main-miembros {
                 }
             }
         }
-
+    }
+    div.link-m {
+        grid-area: link-m;    
     }
 }
 
@@ -124,7 +127,7 @@ main.grid-main-miembros {
                              "seokjin yoongi"                         
                              "hoseok namjoon"
                              "jimin taehyung"
-                             ". jungkook";
+                             "link-m jungkook";
         padding: 4em;
         grid-gap: 4.5em;  
 }
@@ -141,7 +144,7 @@ main.grid-main-miembros {
 @media only screen and (max-width: 500px) {
     main.grid-main-miembros {
         grid-template-columns: 1fr  ;
-        grid-template-rows: repeat(9, auto) ;
+        grid-template-rows: repeat(10, auto) ;
         grid-template-areas: "foto-bts"
                              "description"
                              "seokjin"
@@ -150,8 +153,12 @@ main.grid-main-miembros {
                              "namjoon"
                              "jimin" 
                              "taehyung"
-                             "jungkook";
+                             "jungkook"
+                             "link-m";
         padding: 4em;
         grid-gap: 4.5em;  
 }
+    .link-m {
+        padding: 3em;
+    }
 }

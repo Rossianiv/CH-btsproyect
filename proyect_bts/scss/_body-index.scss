@@ -1,6 +1,4 @@
-:root {
-    --typewriterSpeed: 5s; 
-}
+:root {--typewriterSpeed: 5s; }
 
 main.main-index {
     width: auto;
@@ -39,7 +37,7 @@ main.main-index {
             font-family: 'Dosis';
             opacity: 0;
             transform: translateX(3rem);
-            animation: fadeInLeft 2s ease calc(var(--typewriterSpeed) + 4s ) forwards;
+            animation: fadeInLeft 2s ease calc( var(--typewriterSpeed) + 1s ) forwards;
         }
     }
     
@@ -47,25 +45,11 @@ main.main-index {
     //seccion "miembros"
     div#memb {
         grid-area: memb;
-        display: grid;
         display: flex;
         justify-content: space-around;
         align-items: center;    
         padding-top: 2em;   
-        div {
-            a {
-                text-decoration: none;
-                cursor: pointer; 
-                h2 {
-                    text-decoration: none;
-                }
-            }
-        }
-       
     }
-
-    
-
     //seccion "discografia"
     
         div#disco {
@@ -74,19 +58,12 @@ main.main-index {
             flex-direction: row-reverse;
             justify-content: space-around;
             align-items: center;    
-            padding-top: 2em; 
-            div {
-                a {
-                    text-decoration: none;
-                    cursor: pointer;
-                    h2 {
-                        text-decoration: none;
-                    }
-                }
-            }       
-            
+            padding-top: 2em;               
 }
-
+            a {
+                text-decoration: none;
+                cursor: pointer; 
+            }
 
 }
 
@@ -130,11 +107,11 @@ div.animated-pic:hover {
 
 .animated-sub {
     position: relative; 
-           place-content: center;
-           text-align: center;
-           width: max-content;
-           margin-left: 1em;
-           font-size: 3rem;
+    place-content: center;
+    text-align: center;
+    width: max-content;
+    margin-left: 1em;
+    font-size: 3rem;
 }
 
 h2.animated-sub::before, h2.animated-sub::after  {
@@ -150,13 +127,13 @@ h2.animated-sub::before, h2.animated-sub::after  {
 
 h2.animated-sub::before {
     background: linear-gradient(32deg, rgba(218,184,211,1) 0%, rgba(205,182,219,1) 93%);
-    animation: typewriter 5s steps(24) 3s forwards;
+    animation: typewriter 5s steps(24) 2s forwards;
 }
 
 h2.animated-sub::after {
     width: 0.125em;
     background: black;
-    animation: typewriter 5s steps(24) 3s forwards,
+    animation: typewriter 5s steps(24) 2s forwards,
     blink 750ms steps(24) infinite ;
 }
 

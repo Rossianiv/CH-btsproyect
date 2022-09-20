@@ -8,7 +8,7 @@ main.grid-main-discografia {
                         "cv10 cv11 cv12"
                         "cv13 cv14 cv15"
                         "cv16 cv17 cv18"
-                         "cv19 . ." ;
+                         "cv19 . link-disco" ;
                         align-items: center;
                         justify-items: center;
                         align-content: center;
@@ -72,6 +72,9 @@ main.grid-main-discografia {
 }#cv19 {
     grid-area: cv19;
 }
+.link-disco{
+    grid-area: link-disco ;
+}
 
 //mediaquerys
 
@@ -88,9 +91,9 @@ main.grid-main-discografia {
                             "cv13 cv14"
                             "cv15 cv16"
                             "cv17 cv18"
-                            "cv19 ." ;
-        grid-gap: 15px;
-        padding: 50px 15px;
+                            "cv19 link-disco" ;
+        grid-gap: 0;
+        padding: 1em 0 1em 0;
     }
 
     
@@ -99,7 +102,7 @@ main.grid-main-discografia {
 @media only screen and (max-width: 500px) {
     main.grid-main-discografia {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(19, 1fr) ;
+        grid-template-rows: repeat(20, auto) ;
         grid-template-areas:"cv1"
                             "cv2"
                             "cv3" 
@@ -118,8 +121,11 @@ main.grid-main-discografia {
                             "cv16"
                             "cv17" 
                             "cv18"
-                            "cv19" ;
+                            "cv19"
+                            "link-disco" ;
+        padding: 1em 0 1em 0;
     }
+    
 
 }
 
