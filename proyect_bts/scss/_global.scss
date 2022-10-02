@@ -3,12 +3,9 @@
 
 //Reset
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-     
-  }
-  
+    @include reset;
+}
+   
   :root {
       --color-primario : #5C2880;
       --color-secundario: #c9a4e2;

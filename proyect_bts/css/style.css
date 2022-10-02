@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Dosis:wght@500&family=Noto+Serif+KR:wght@500&family=Sacramento&display=swap");
 * {
-  box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 :root {
   --color-primario: #5C2880;
@@ -104,7 +104,7 @@ header {
       width: auto;
       height: 10vh; }
     header div h1 a {
-      font-size: 2rem; }
+      font-size: 2.5rem; }
     header nav ul li a {
       font-size: 1.5rem;
       padding-top: 10px; } }
@@ -117,7 +117,7 @@ header {
       width: auto;
       height: 9vh; }
     header div h1 a {
-      font-size: 1rem; }
+      font-size: 1.1rem; }
     header nav {
       display: flex;
       justify-content: space-around;
@@ -139,7 +139,7 @@ footer {
   text-align: right;
   color: #e3bac6; }
   footer div img {
-    padding: 10px 0px 0px 10px;
+    padding: 0.625em 0.625em 0.625em 1em;
     height: 15vh;
     width: auto; }
   footer div ul li {
@@ -175,31 +175,35 @@ footer {
   --typewriterSpeed: 5s; }
 
 main.main-index {
-  width: auto;
   display: grid;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "img-w img-w" "subt p" " memb memb " "disco disco";
-  justify-content: center;
-  align-items: center;
-  grid-gap: 2em;
-  padding: 2em; }
+  gap: 4em 2em;
+  padding: 4em; }
   main.main-index div.img-welcome {
     grid-area: img-w;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 0;
+    width: auto; }
     main.main-index div.img-welcome img {
-      height: 40vh;
-      width: 80vw;
+      height: auto;
+      width: 75%;
+      padding: 0;
+      margin: 0;
       max-width: 100%;
-      border-radius: 2em;
-      padding: 2em 0 0; }
+      border-radius: 2em; }
   main.main-index div.subtitulo {
     grid-area: subt;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     text-align: left; }
   main.main-index div.p-right {
     grid-area: p; }
@@ -213,9 +217,10 @@ main.main-index {
   main.main-index div#memb {
     grid-area: memb;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding-top: 2em; }
+    justify-content: space-around;
+    padding: 1em; }
   main.main-index div#disco {
     grid-area: disco;
     display: flex;
@@ -230,6 +235,7 @@ main.main-index {
 .subt {
   font-family: 'Dancing Script';
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 4rem;
   padding: 0; }
@@ -238,10 +244,12 @@ div.animated-pic {
   transform: perspective(3000px) rotateY(5deg);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   transition: transform 1s ease 0s;
-  height: 35vh; }
+  width: 45vw;
+  padding: 0; }
 
 div.animated-pic a img {
-  height: 50vh;
+  height: auto;
+  width: 100%;
   padding: 0;
   border-radius: 1rem; }
 
@@ -325,10 +333,26 @@ h2.animated-sub::after {
       text-align: justify; } }
 
 @media only screen and (max-width: 760px) {
-  div.img-welcome img {
-    height: auto;
-    width: 80vw;
-    max-width: 100%; } }
+  main.main-index {
+    gap: 1em; }
+    main.main-index div.img-welcome img {
+      height: auto;
+      width: 80vw;
+      max-width: 100%;
+      margin-bottom: 2em; }
+    main.main-index div.p-right p {
+      padding: .5em;
+      font-size: 1rem; }
+    main.main-index div#memb, main.main-index div#disco {
+      flex-direction: column;
+      gap: 2em;
+      padding: 0; }
+      main.main-index div#memb h2, main.main-index div#disco h2 {
+        font-size: 3rem; }
+      main.main-index div#memb .animated-pic, main.main-index div#disco .animated-pic {
+        width: 70vw; }
+  h2.subt.animated-sub {
+    font-size: 2.6rem; } }
 
 main.grid-main-discografia {
   display: grid;
@@ -596,11 +620,11 @@ div:hover.style-cover {
   .contenido-dico {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
-    grid-template-areas: "about" "cov" "song-l"    "videos"  "galery";
+    grid-template-areas: "about" "song-l" "cov"    "videos"  "galery";
     row-gap: 2em; }
     .contenido-dico div, .contenido-dico aside {
       height: auto;
-      width: 400px;
+      width: 24em;
       padding: 0;
       margin: 0;
       max-width: 100%; }

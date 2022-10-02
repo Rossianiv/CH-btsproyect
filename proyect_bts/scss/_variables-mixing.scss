@@ -8,3 +8,21 @@ $typewriterSpeed: 5s;
 
 
 //mixing
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin grid-centrado {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

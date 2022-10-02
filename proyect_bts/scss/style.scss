@@ -1,21 +1,21 @@
 //  MODULOS
 
 //variables y mixing
-@import 'variables-mixing'; 
+@import './variables-mixing'; 
 //global
-@import 'global';
+@import './global';
 //header 
-@import 'header';
+@import './header';
 //footer
-@import 'footer';
+@import './footer';
 //body-index
-@import 'body-index';
+@import './body-index';
 //body-discografia
-@import 'body-discografia';
+@import './body-discografia';
 //body-discografia individual
-@import 'body-discografia-cd-u';
+@import './body-discografia-cd-u';
 //body-miembros
-@import 'body-miembros';
+@import './body-miembros';
 
 /* Listado de animaciones
     .style-cover AGRANDA LA CARATULA Y LA ENDEREZA
