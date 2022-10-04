@@ -40,6 +40,9 @@ main {
   height: auto;
   background: linear-gradient(55deg, #fccfba 0%, #d3b3d8 50%, #9fc9ef 100%); }
 
+body {
+  overflow-x: hidden; }
+
 .img-nj {
   grid-area: nj; }
 
@@ -757,6 +760,89 @@ main.grid-main-miembros {
     grid-gap: 4.5em; }
   .link-m {
     padding: 3em; } }
+
+main.main-contacto {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "link-bts gif1" "link-ch gif1" "formulario gif2";
+  gap: 8em 3em;
+  padding: 3em;
+  justify-content: center;
+  align-items: center; }
+  main.main-contacto div.gif1 {
+    grid-area: gif1;
+    width: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main.main-contacto div.gif1 img {
+      padding: 0;
+      margin: 0;
+      height: auto;
+      width: 28vw;
+      max-width: 100%;
+      border-radius: 9em; }
+  main.main-contacto div.enlaces-oficiales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    main.main-contacto div.enlaces-oficiales h2 {
+      font-size: 2.5rem; }
+    main.main-contacto div.enlaces-oficiales ul {
+      text-align: center; }
+      main.main-contacto div.enlaces-oficiales ul li {
+        font-size: 1.5rem;
+        font-family: "Dosis";
+        display: inline-block; }
+        main.main-contacto div.enlaces-oficiales ul li a {
+          text-decoration: none;
+          color: #6e1a8b; }
+          main.main-contacto div.enlaces-oficiales ul li a:hover {
+            color: #e3bac6;
+            background-color: #1f2232;
+            transition: 0.8s; }
+  main.main-contacto div.formulario {
+    grid-area: formulario;
+    font-family: "Dosis";
+    font-size: 1.5rem;
+    text-align: center; }
+  main.main-contacto div.gif2 {
+    grid-area: gif2;
+    width: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main.main-contacto div.gif2 img {
+      padding: 0;
+      margin: 0;
+      height: auto;
+      width: 20vw;
+      max-width: 100%;
+      border-radius: 9em; }
+
+.enl-bts {
+  grid-area: link-bts; }
+
+.enl-ch {
+  grid-area: link-ch; }
+
+@media only screen and (max-width: 1024px) {
+  main.main-contacto {
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "link-bts link-bts" "gif1 gif1" "link-ch link-ch" "formulario gif2"; }
+    main.main-contacto div.gif1 img {
+      width: 70vw; } }
+
+@media only screen and (max-width: 600px) {
+  main.main-contacto {
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "link-bts link-bts" "gif1 gif1" "link-ch link-ch" "gif2 gif2" "formulario formulario"; }
+  div.gif1 div.gif2 img {
+    width: 60vw; } }
 
 /* Listado de animaciones
     .style-cover AGRANDA LA CARATULA Y LA ENDEREZA
