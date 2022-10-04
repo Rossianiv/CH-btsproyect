@@ -89,26 +89,8 @@
         div.title-galery {
             grid-area: tt-g;
         }
-        div.img-nj {
-            grid-area: nj;
-        }
-        div.img-sj {
-            grid-area: sj;
-        }
-        div.img-yg {
-            grid-area: yg;
-        }
-        div.img-hs {
-            grid-area: hs;
-        }
-        div.img-jm {
-            grid-area: jm;
-        }
-        div.img-th {
-            grid-area: th;
-        }div.img-jk {
-            grid-area: jk;
-        }div.link-discografia {
+        
+        div.link-discografia {
             grid-area: link-discografia;
             display: flexbox;
             justify-content: center;
@@ -125,7 +107,7 @@
             border-radius: 1.2rem;           
         }
         }
-}
+    }
 
 //clases y ids, transiciones, transformaciones
 

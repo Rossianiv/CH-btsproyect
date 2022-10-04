@@ -40,6 +40,27 @@ main {
   height: auto;
   background: linear-gradient(55deg, #fccfba 0%, #d3b3d8 50%, #9fc9ef 100%); }
 
+.img-nj {
+  grid-area: nj; }
+
+.img-sj {
+  grid-area: sj; }
+
+.img-yg {
+  grid-area: yg; }
+
+.img-hs {
+  grid-area: hs; }
+
+.img-jm {
+  grid-area: jm; }
+
+.img-th {
+  grid-area: th; }
+
+.img-jk {
+  grid-area: jk; }
+
 header {
   display: flex;
   flex-direction: row;
@@ -523,20 +544,6 @@ div:hover.style-cover {
     grid-gap: .5em; }
     .contenido-dico div.widget-2 div.title-galery {
       grid-area: tt-g; }
-    .contenido-dico div.widget-2 div.img-nj {
-      grid-area: nj; }
-    .contenido-dico div.widget-2 div.img-sj {
-      grid-area: sj; }
-    .contenido-dico div.widget-2 div.img-yg {
-      grid-area: yg; }
-    .contenido-dico div.widget-2 div.img-hs {
-      grid-area: hs; }
-    .contenido-dico div.widget-2 div.img-jm {
-      grid-area: jm; }
-    .contenido-dico div.widget-2 div.img-th {
-      grid-area: th; }
-    .contenido-dico div.widget-2 div.img-jk {
-      grid-area: jk; }
     .contenido-dico div.widget-2 div.link-discografia {
       grid-area: link-discografia;
       display: flexbox;

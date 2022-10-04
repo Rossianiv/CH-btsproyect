@@ -4,18 +4,22 @@
 @import './variables-mixing'; 
 //global
 @import './global';
+//each
+@import './each';
 //header 
 @import './header';
 //footer
 @import './footer';
 //body-index
 @import './body-index';
-//body-discografia
+//body-discografia 
 @import './body-discografia';
 //body-discografia individual
 @import './body-discografia-cd-u';
 //body-miembros
 @import './body-miembros';
+//body-contacto
+@import './body-contacto'; 
 
 /* Listado de animaciones
     .style-cover AGRANDA LA CARATULA Y LA ENDEREZA
